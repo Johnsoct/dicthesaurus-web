@@ -1,0 +1,70 @@
+@use 'sass:map';
+@use 'base/index';
+@use 'base/colors' as *;
+@use 'base/constants/misc' as *;
+@use 'base/constants/breakpoints' as *;
+@use 'base/constants/typography' as *;
+@use 'base/functions' as *;
+@use 'base/spacing/box' as *;
+@use 'base/spacing/containers' as *;
+@use 'shortcuts';
+@use 'terminal';
+
+body {
+  max-width: $spacing-xl;
+  padding: 0 $spacing-8;
+
+  @media #{$tablet-large-and-down} {
+    padding: 0 $spacing-4;
+  }
+}
+
+.DownloadLink {
+  align-content: center;
+  background-color: #e95420;
+  border-radius: $border-radius;
+  color: $base-white;
+  display: block;
+  font-size: rems(map.get($font-sizes, "text-md"));
+  height: $spacing-10;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  width: fit-content;
+
+  &:active {
+    background-color: darken(#e95420, 12);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: darken(#e95420, 7);
+    box-shadow: $dialog-shadow;
+  }
+}
+
+.Nav {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: $spacing-4 0;
+
+  &__github {
+    border-radius: 50%;
+    justify-self: end;
+
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow-inputs;
+    }
+  }
+
+  &__github img {
+    height: $spacing-6;
+    width: $spacing-6;
+  }
+
+  &__title {
+    justify-self: start;
+  }
+}
+

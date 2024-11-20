@@ -1,0 +1,78 @@
+@use "sass:map"
+@use "base/colors" as *
+@use "base/spacing/box" as *
+@use "base/spacing/containers" as *
+@use "base/functions" as *
+@use "base/mixins" as *
+@use "base/constants/breakpoints" as *
+@use "base/constants/misc" as *
+@use "base/constants/typography" as *
+
+.Terminal
+  border-radius: $border-radius
+  box-shadow: $dialog-shadow
+  display: block
+  margin: rems(map.get($font-sizes, "display-2xl")) auto
+  max-width: $spacing-md
+
+  @media #{$tablet-large-and-down}
+    margin: rems(map.get($font-sizes, "display-lg")) auto
+
+  pre,
+  span
+    color: $base-white
+    text-wrap: wrap
+
+  &__body
+    border-radius: 0 0 $border-radius $border-radius
+    background-color: #380c2a
+    color: $base-white
+    min-height: rems($spacing-64)
+    padding: $spacing-3
+
+  &__heading
+    background-color: $base-white
+    color: $base-black
+    font-weight: map.get($font-weights, "semi-bold")
+    text-decoration: underline
+    text-transform: uppercase
+
+  &__menu-bar
+    align-items: center
+    background-color: #222
+    border-radius: $border-radius $border-radius 0 0
+    display: grid
+    grid-template-columns: 1fr 2fr 1fr
+    justify-items: center
+    padding: $spacing-3
+    width: 100%
+
+    @media #{$tablet-large-and-down}
+      grid-template-columns: 1fr 1fr
+      justify-items: start
+
+      div:nth-child(1)
+        display: none
+
+  &__menu-bar-icons
+    justify-self: end
+
+  &__menu-bar-title label
+    color: $base-white
+    font-weight: map.get($font-weights, "medium")
+
+  &__menu-icon
+    background-color: #343434
+    border-radius: 50%
+    display: inline-block
+    // height: rems($spacing-4)
+    padding: rems(1px)
+    width: rems($spacing-5)
+
+    path
+      fill: #B8B8B8
+
+  &__replaced-token
+    font-weight: map.get($font-weights, "semi-bold")
+    text-decoration: underline
+    text-transform: uppercase

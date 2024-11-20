@@ -5,24 +5,95 @@
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <script type="module" src="/index.js"></script>
+        <script
+            defer
+            src="components/terminal-mockup.js"
+            type="module"
+        ></script>
     </head>
 
     <body>
-        <main class="max-w-screen-sm mx-auto p-6 mt-14 rounded-lg prose">
-            <h1 class="text-center">Don't skip it; Look it up!</h1>
-            <h2 class="text-center">A lightweight, dead simple dictionary CLI</h2>
+        <nav class="Nav">
+            <a 
+                class="Nav__title subtitle-1 p-0 fw-semi-bold"
+                href="/"
+            >
+                Dicthesaurus
+            </a>
+            <a
+                class="Nav__github"
+                href="https://github.com/Johnsoct/dicthesaurus"
+                target="_blank"
+            >
+                <img
+                    alt="GitHub icon"
+                    src="/public/assets/icons/github-mark.svg"
+                >
+            </a>
+        </nav>
 
-            <section class="mockup-code max-w-screen-sm mx-auto mt-7">
-                <pre data-prefix="$"><code>dt innovate</code></pre>
-                <pre data-prefix=">" class="text-warning"><code>Searching for "innovate"</code></pre>
+        <main>
+            <section>
+                <h1 class="h1 center">Don't skip it; Look it up</h1>
+                <h2 class="h5 center">A lightweight, dead simple dictionary CLI</h2>
+
+                <terminal-mockup class="Terminal">
+                    <pre><code>$ dt mother</code></pre>
+                    <br>
+                    <pre>       <code>Searching dictionary for "mother" ...</code></pre>
+                    <br>
+                    <br>
+                    <br>
+                    <pre>       <code class="Terminal__heading">TRANSITIVE VERB</code></pre>
+                    <br>
+                    <br>
+                    <pre>1      <code>to give birth to</code></pre>
+                    <br>
+                    <pre>       <code>to give rise to: <span class="Terminal__replaced-token">PRODUCE</span></code></pre>
+                    <br>
+                    <pre>2      <code>to care for or protect like a mother</code></pre>
+                    <br>
+                    <br>
+                    <br>
+                    <pre>       <code class="Terminal__heading">NOUN</code></pre>
+                    <br>
+                    <br>
+                    <pre>1      <code>a person who assumes an overly protective maternal attitude</code></pre>
+                    <br>
+                    <pre>2      <code>the country from which the people of a colony or former colony derive their origin</code></pre>
+                    <br>
+                </terminal-mockup>
+
+                <a                   
+                    class="DownloadLink"
+                    href="https://github.com/Johnsoct/dicthesaurus/raw/refs/heads/main/dt"
+                    download="dt"
+                >
+                    Download for Linux and MacOS
+                </a>
+            </section>
+
+            <section>
+                <h2 class="h2 center">The easiest CLI you'll ever use</h2>
             </section>
         </main>
 
+        <!-- <main class="max-w-screen-sm mx-auto p-6 mt-14 rounded-lg prose"> -->
+        <!--     <h1 class="text-center">Don't skip it; Look it up!</h1> -->
+        <!--     <h2 class="text-center">A lightweight, dead simple dictionary CLI</h2> -->
+        <!---->
+        <!--     <section class="mockup-code max-w-screen-sm mx-auto mt-7"> -->
+        <!--         <pre data-prefix="$"><code>dt innovate</code></pre> -->
+        <!--         <pre data-prefix=">" class="text-warning"><code>Searching for "innovate"</code></pre> -->
+        <!--     </section> -->
+        <!-- </main> -->
+        <!---->
+        <!---->
+        <!-- <section class="max-w-screen-sm mx-auto prose"> -->
+        <!--     <h2 class="text-center">The easiest CLI you'll ever use</h2> -->
+        <!-- </section> -->
 
-        <section class="max-w-screen-sm mx-auto prose">
-            <h2 class="text-center">The easiest CLI you'll ever use</h2>
-        </section>
-
-        <script type="module" src="/index.js"></script>
     </body>
 </html>
