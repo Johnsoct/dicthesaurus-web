@@ -5,6 +5,7 @@
 @use 'base/constants/breakpoints' as *;
 @use 'base/constants/typography' as *;
 @use 'base/functions' as *;
+@use 'base/mixins' as *;
 @use 'base/spacing/box' as *;
 @use 'base/spacing/containers' as *;
 @use 'shortcuts';
@@ -42,29 +43,64 @@ body {
   }
 }
 
+.List {
+  margin: rems(map.get($font-sizes, "display-2xl")) auto;
+  max-width: $spacing-md;
+
+  li {
+    font-size: rems(map.get($font-sizes, "display-xs"));
+    line-height: map.get($font-sizes, "display-xs") * $ratio;
+    margin-top: rems(map.get($font-sizes, "display-2xl") / 3);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    pre {
+      background-color: #380c2a;
+      border-radius: $border-radius;
+      color: $base-white;
+      display: inline-block;
+      padding: $spacing-1 $spacing-3;
+    }
+  }
+}
+
 .Nav {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include flex($align: center);
   padding: $spacing-4 0;
 
-  &__github {
+  &__left {
+    width: 100%;
+  }
+
+  &__icon-link {
     border-radius: 50%;
-    justify-self: end;
 
     &:hover,
     &:focus {
-      box-shadow: $box-shadow-inputs;
+      box-shadow: $dialog-shadow;
+    }
+
+    img {
+      height: $spacing-6;
+      width: $spacing-6;
     }
   }
 
-  &__github img {
-    height: $spacing-6;
-    width: $spacing-6;
-  }
+  &__right {
+    @include flex($align: center, $justify: end);
+    width: 100%;
 
-  &__title {
-    justify-self: start;
+    .DownloadLink {
+      display: inline-block;
+      margin-left: 0;
+      margin-right: $spacing-3;
+
+      @media #{$tablet-large-and-down} {
+        display: none;
+      }
+    }
   }
 }
 

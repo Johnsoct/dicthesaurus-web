@@ -16,28 +16,49 @@
 
     <body>
         <nav class="Nav">
-            <a 
-                class="Nav__title subtitle-1 p-0 fw-semi-bold"
-                href="/"
-            >
-                Dicthesaurus
-            </a>
-            <a
-                class="Nav__github"
-                href="https://github.com/Johnsoct/dicthesaurus"
-                target="_blank"
-            >
-                <img
-                    alt="GitHub icon"
-                    src="/public/assets/icons/github-mark.svg"
+            <div class="Nav__left">
+                <a 
+                    class="Nav__title subtitle-1 p-0 fw-semi-bold"
+                    href="/"
                 >
-            </a>
+                    Dicthesaurus
+                </a>
+            </div>
+            <div class="Nav__right">
+                <a
+                    class="DownloadLink"
+                    href="https://github.com/Johnsoct/dicthesaurus/raw/refs/heads/main/dt"
+                    download="dt"
+                >
+                    Download for Linux and MacOS
+                </a>
+                <a
+                    class="Nav__icon-link"
+                    href="https://github.com/Johnsoct/dicthesaurus"
+                    target="_blank"
+                >
+                    <img
+                        alt="GitHub icon"
+                        src="/public/assets/icons/github-mark.svg"
+                    >
+                </a>
+            </div>
         </nav>
 
         <main>
             <section>
-                <h1 class="h1 center">Don't skip it; Look it up</h1>
-                <h2 class="h5 center">A lightweight, dead simple dictionary CLI</h2>
+                <h1 
+                    class="h1 center"
+                    id="MainHeader__heading"
+                >
+                    Don't skip it; Look it up
+                </h1>
+                <h2
+                    class="h5 center"
+                    id="MainHeader__subheading"
+                >
+                    A lightweight, dead simple dictionary CLI
+                </h2>
 
                 <terminal-mockup class="Terminal">
                     <pre><code>$ dt mother</code></pre>
@@ -76,24 +97,20 @@
             </section>
 
             <section>
-                <h2 class="h2 center">The easiest CLI you'll ever use</h2>
+                <h2 
+                    class="h2 center"
+                    id="SecondaryHeader__heading"
+                >
+                    The easiest CLI you'll ever use
+                </h2>
+
+                <ul class="List">
+                    <li>Dead simple command syntax: <pre><code>$ dt [word]</code></pre></li>
+                    <li>Usable anywhere there's bash and the internet</li>
+                    <li>Never leave the keyboard; no browser tab, no dictionary website, no mouse</li>
+                    <li>Just the definition information; no ads, no bullshit</li>
+                </ul>
             </section>
         </main>
-
-        <!-- <main class="max-w-screen-sm mx-auto p-6 mt-14 rounded-lg prose"> -->
-        <!--     <h1 class="text-center">Don't skip it; Look it up!</h1> -->
-        <!--     <h2 class="text-center">A lightweight, dead simple dictionary CLI</h2> -->
-        <!---->
-        <!--     <section class="mockup-code max-w-screen-sm mx-auto mt-7"> -->
-        <!--         <pre data-prefix="$"><code>dt innovate</code></pre> -->
-        <!--         <pre data-prefix=">" class="text-warning"><code>Searching for "innovate"</code></pre> -->
-        <!--     </section> -->
-        <!-- </main> -->
-        <!---->
-        <!---->
-        <!-- <section class="max-w-screen-sm mx-auto prose"> -->
-        <!--     <h2 class="text-center">The easiest CLI you'll ever use</h2> -->
-        <!-- </section> -->
-
     </body>
 </html>
