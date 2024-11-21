@@ -1,4 +1,4 @@
-import styles from '../index.css?inline'
+import styles from '../styles/terminal.sass?inline'
 
 const template = document.createElement('template')
 template.className = ""
