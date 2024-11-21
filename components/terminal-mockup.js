@@ -12,7 +12,7 @@ ${styles}
         <div class="Terminal__menu-bar">
                 <div></div>
                 <div class="Terminal__menu-bar-title">
-                  <label>~/dicthesaurus</label>
+                  <label><slot name="cwd">~/dev</slot></label>
                 </div>
                 <div class="Terminal__menu-bar-icons">
                         <svg
@@ -41,7 +41,7 @@ ${styles}
 
         <!-- Terminal body -->
         <div class="Terminal__body">
-                <slot></slot>
+                <slot name="body"></slot>
         </div>
 </div>
 `

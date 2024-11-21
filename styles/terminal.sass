@@ -18,15 +18,19 @@
   @media #{$tablet-large-and-down}
     margin: rems(map.get($font-sizes, "display-lg")) auto
 
-  pre,
-  span
+  & [slot="body"]
+    pre,
+    span
+      color: $base-white
+      text-wrap: wrap
+
+  & [slot="cwd"]
     color: $base-white
-    text-wrap: wrap
+    font-weight: map.get($font-weights, "semi-bold")
 
   &__body
     border-radius: 0 0 $border-radius $border-radius
     background-color: #380c2a
-    color: $base-white
     min-height: rems($spacing-64)
     padding: $spacing-3
 
@@ -45,7 +49,6 @@
     grid-template-columns: 1fr 2fr 1fr
     justify-items: center
     padding: $spacing-3
-    width: 100%
 
     @media #{$tablet-large-and-down}
       grid-template-columns: 1fr 1fr
@@ -56,10 +59,6 @@
 
   &__menu-bar-icons
     justify-self: end
-
-  &__menu-bar-title label
-    color: $base-white
-    font-weight: map.get($font-weights, "medium")
 
   &__menu-icon
     background-color: #343434
