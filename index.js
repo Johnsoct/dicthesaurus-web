@@ -1,4 +1,7 @@
-import './index.css'
+// CSS
+import '@/index.css'
+// Lovely web components
+import '@/components/terminal-mockup'
 
 const randomOptionWithinOptions = (options) => {
         const index = Math.floor(Math.random() * options.length)

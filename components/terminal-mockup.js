@@ -1,8 +1,10 @@
+import styles from '../index.css?inline'
+
 const template = document.createElement('template')
 template.className = ""
 template.innerHTML = `
 <style>
-@import url("../index.css")
+${styles}
 </style>
 <!-- INSERT HTML HERE -->
 <div class="Terminal">
