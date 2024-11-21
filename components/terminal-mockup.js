@@ -2,7 +2,7 @@ const template = document.createElement('template')
 template.className = ""
 template.innerHTML = `
 <style>
-@import "../index.css"
+@import url("../index.css")
 </style>
 <!-- INSERT HTML HERE -->
 <div class="Terminal">

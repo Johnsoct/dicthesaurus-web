@@ -1,4 +1,6 @@
+@use 'sass:color';
 @use 'sass:map';
+@use 'sass:math';
 @use 'base/index';
 @use 'base/colors' as *;
 @use 'base/constants/misc' as *;
@@ -33,12 +35,12 @@ body {
   width: fit-content;
 
   &:active {
-    background-color: darken(#e95420, 12);
+    background-color: color.adjust(#e95420, $lightness: -12%);
   }
 
   &:focus,
   &:hover {
-    background-color: darken(#e95420, 7);
+    background-color: color.adjust(#e95420, $lightness: -7%);
     box-shadow: $dialog-shadow;
   }
 }
@@ -50,7 +52,7 @@ body {
   li {
     font-size: rems(map.get($font-sizes, "display-xs"));
     line-height: map.get($font-sizes, "display-xs") * $ratio;
-    margin-top: rems(map.get($font-sizes, "display-2xl") / 3);
+    margin-top: rems(math.div(map.get($font-sizes, "display-2xl"), 3));
 
     &:first-child {
       margin-top: 0;

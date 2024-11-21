@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import tailwindcss from "tailwindcss";
 
 export default defineConfig({
         css: {
@@ -8,5 +7,10 @@ export default defineConfig({
                                 api: 'modern-compiler',
                         }
                 }
-        }
+        },
+        resolve: {
+                alias: {
+                        '@': require('path').resolve(__dirname, '/'),
+                },
+        },
 });
